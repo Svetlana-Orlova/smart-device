@@ -189,8 +189,16 @@ textarea::placeholder {
   margin: 0;
 
   @media (max-width: $mobile-width) {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
+    padding-left: 30px;
+    width: 80%;
+  }
+}
+
+.form__checkbox br {
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 
