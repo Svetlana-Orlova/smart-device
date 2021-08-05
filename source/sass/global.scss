@@ -1,0 +1,39 @@
+$tablet-width: 1023px;
+$desktop-width: 1024px;
+$mobile-width: 767px;
+
+body {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

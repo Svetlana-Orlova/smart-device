@@ -1,0 +1,15 @@
+.page-footer {
+  margin-top: auto;
+  padding-bottom: 10px;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 15px;
+    padding-bottom: 55px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 16px;
+    padding-bottom: 51px;
+  }
+}
