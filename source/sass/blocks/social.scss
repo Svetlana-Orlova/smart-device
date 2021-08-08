@@ -1,0 +1,109 @@
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px 150px;
+  box-sizing: border-box;
+  max-width: 1540px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 65px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 0;
+  }
+}
+
+.page-footer__social {
+  display: block;
+  box-sizing: border-box;
+  max-width: 1443px;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border-grey;
+    gap: 20px;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 26px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 54px;
+  }
+}
+
+.page-footer__logo {
+  width: 216px;
+  height: 52px;
+  opacity: 1;
+}
+
+.page-footer__social p {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $black;
+    opacity: 0.5;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 26px;
+  }
+}
+
+.page-footer__social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  margin-top: 54px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 31px;
+  }
+}
+
+.page-footer__social a {
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

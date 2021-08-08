@@ -3,6 +3,7 @@
 }
 
 .banner {
+  position: relative;
   background-color: $black;
   background-image: url("../img/bg-d@1x.png");
   background-repeat: no-repeat;
@@ -10,16 +11,47 @@
   background-position: center;
   padding-bottom: 92px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/board-d@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 36.7vw;
+    height: 26.8vw;
+    max-width: 860px;
+    max-height: 630px;
+    top: 30%;
+    right: 9%;
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bg-d@2x.png");
+
+    &::after {
+      background-image: url("../img/board-d@2x.png");
+    }
   }
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/bg-t@1x.png");
     padding-bottom: 163px;
 
+    &::after {
+      background-image: url("../img/board-t@1x.png");
+      width: 34vw;
+      height: 44.2vw;
+      top: 100px;
+      right: 0;
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-t@2x.png");
+
+      &::after {
+        background-image: url("../img/board-t@2x.png");
+      }
     }
   }
 
@@ -27,8 +59,19 @@
     background-image: url("../img/bg-m@1x.png");
     padding-bottom: 70px;
 
+    &::after {
+      background-image: url("../img/board-m@1x.png");
+      width: 294px;
+      height: 220px;
+      top: 75px;
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-m@2x.png");
+
+      &::after {
+        background-image: url("../img/board-m@2x.png");
+      }
     }
   }
 }
@@ -36,10 +79,15 @@
 .banner__wrapper {
   color: $white;
   position: relative;
-  width: 733px;
+  width: 39vw;
+  max-width: 733px;
   padding-top: 378px;
   margin-left: 13vw;
   margin-right: 13vw;
+
+  @media (max-width: 1400px) {
+    width: 52vw;
+  }
 
   @media (max-width: $tablet-width) {
     width: 470px;

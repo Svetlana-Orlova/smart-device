@@ -1,0 +1,45 @@
+.page-footer__contacts {
+  margin: 0;
+  width: 22vw;
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.page-footer__contacts h2 {
+  @media (max-width: $mobile-width) {
+    margin-top: 28px;
+  }
+}
+
+.page-footer__contacts-wrapper {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: left;
+  letter-spacing: 0.1em;
+  color: $black;
+  opacity: 0.5;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 29px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 26px;
+  }
+}
+
+.page-footer__contacts-wrapper p {
+  padding: 0;
+  margin: 0;
+  margin-top: 29px;
+}
+
+.page-footer__contacts-wrapper a {
+  opacity: 0.9;
+}
