@@ -1,4 +1,6 @@
 (() => {
+  const MOBILE_WIDTH = 767;
+
   const anchors = document.querySelectorAll('.banner a');
 
   anchors.forEach((anchor) => {
@@ -113,43 +115,6 @@
     overlay = false;
   });
 
-  // const symbols = /[A-Za-zА-Яа-яЁё.!<>%$?:''*,~|_№;=]/;
-  // const maskPhone = {
-  //   0: '+',
-  //   1: '7',
-  //   2: '(',
-  //   6: ')',
-  //   10: '-',
-  //   13: '-',
-  // };
-  // const validateFieldPhone = (evt) => {
-  //   evt.target.value = evt.target.value.replace(symbols, '');
-  //   evt.target.maxLength = 16;
-  //   if (evt.target.value.length === 0) {
-  //     evt.target.value = '+7(';
-  //   }
-  //   if (maskPhone[evt.target.value.length] && evt.data !== null) {
-  //     evt.target.value = evt.target.value + maskPhone[evt.target.value.length];
-
-  //     if (evt.target.value.length !== 16) {
-  //       evt.target.invalid = true;
-  //     }
-  //   } else {
-  //     evt.target.invalid = false;
-  //   }
-  // };
-
-  // usertel.addEventListener(('input'), validateFieldPhone);
-  // userPhone.addEventListener(('input'), validateFieldPhone);
-
-  // usertel.addEventListener('focus', (evt) => {
-  //   evt.target.value = '+7(';
-  // });
-
-  // userPhone.addEventListener('focus', (evt) => {
-  //   evt.target.value = '+7(';
-  // });
-
   window.addEventListener('DOMContentLoaded', () => {
     [].forEach.call(document.querySelectorAll('.tel'), (input) => {
       let keyCode;
@@ -186,4 +151,27 @@
       input.addEventListener('keydown', mask, false);
     });
   });
+
+  const footerMenu = document.querySelector('.page-footer__sections');
+
+  if (footerMenu) {
+    const lists = footerMenu.querySelectorAll('.footer-list');
+    const toggles = footerMenu.querySelectorAll('.footer-list-toggle');
+
+    lists.forEach((list) => list.classList.remove('footer--nojs'));
+
+    for (let i = 0; i < toggles.length; i++) {
+      if (window.innerWidth <= MOBILE_WIDTH) {
+        toggles[i].classList.remove('visually-hidden');
+        toggles[i].addEventListener('click', () => {
+          if (lists[i].classList.contains('footer-list--opened')) {
+            lists[i].classList.remove('footer-list--opened');
+          } else {
+            lists.forEach((item) => item.classList.remove('footer-list--opened'));
+            lists[i].classList.add('footer-list--opened');
+          }
+        });
+      }
+    }
+  }
 })();
