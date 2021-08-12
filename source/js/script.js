@@ -23,6 +23,7 @@
   const inputsPhone = document.querySelectorAll('input[type="tel"]');
   const textareas = document.querySelectorAll('textarea');
 
+
   let isStorageSupport = true;
   let storage = '';
   let storageTel = '';
@@ -36,27 +37,29 @@
     isStorageSupport = false;
   }
 
-  if (isStorageSupport) {
-    inputsName.forEach((name) => {
-      name.value = storage;
-    });
-    inputsPhone.forEach((phone) => {
-      phone.value = storageTel;
-    });
-    textareas.forEach((text) => {
-      text.value = storageMessage;
+  if (forms && inputsName && inputsPhone && textareas) {
+    if (isStorageSupport) {
+      inputsName.forEach((name) => {
+        name.value = storage;
+      });
+      inputsPhone.forEach((phone) => {
+        phone.value = storageTel;
+      });
+      textareas.forEach((text) => {
+        text.value = storageMessage;
+      });
+    }
+
+    forms.forEach((form) => {
+      form.addEventListener('submit', () => {
+        if (isStorageSupport) {
+          localStorage.setItem('username', form.querySelector('input[type="text"]').value);
+          localStorage.setItem('usertel', form.querySelector('input[type="tel"]').value);
+          localStorage.setItem('message', form.querySelector('textarea').value);
+        }
+      });
     });
   }
-
-  forms.forEach((form) => {
-    form.addEventListener('submit', () => {
-      if (isStorageSupport) {
-        localStorage.setItem('username', form.querySelector('input[type="text"]').value);
-        localStorage.setItem('usertel', form.querySelector('input[type="tel"]').value);
-        localStorage.setItem('message', form.querySelector('textarea').value);
-      }
-    });
-  });
 
   const body = document.body;
   const link = document.querySelector('.call');

@@ -34,7 +34,7 @@
 .page-footer__social {
   display: block;
   box-sizing: border-box;
-  max-width: 1443px;
+  max-width: 225px;
 
   @media (max-width: $tablet-width) {
     display: flex;
@@ -45,6 +45,7 @@
     border-bottom: 1px solid $border-grey;
     gap: 20px;
     width: 100%;
+    max-width: 1443px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 26px;
