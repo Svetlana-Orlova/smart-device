@@ -3,18 +3,20 @@
 
   const anchors = document.querySelectorAll('.banner a');
 
-  anchors.forEach((anchor) => {
-    anchor.addEventListener('click', (evt) => {
-      evt.preventDefault();
+  if (anchors) {
+    anchors.forEach((anchor) => {
+      anchor.addEventListener('click', (evt) => {
+        evt.preventDefault();
 
-      const sectionID = anchor.getAttribute('href').substr(1);
+        const sectionID = anchor.getAttribute('href').substr(1);
 
-      document.getElementById(sectionID).scrollIntoView({
-        behavior: 'smooth',
-        section: 'start',
+        document.getElementById(sectionID).scrollIntoView({
+          behavior: 'smooth',
+          section: 'start',
+        });
       });
     });
-  });
+  }
 
   const forms = document.querySelectorAll('form');
   const inputsName = document.querySelectorAll('input[type="text"]');
@@ -64,56 +66,59 @@
   const textarea = popup.querySelector('textarea');
   const buttonClose = popup.querySelector('.close-button');
 
-  link.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    popup.classList.add('popup--opened');
-    body.classList.add('fixed');
-    userName.focus();
-    if (storage) {
-      userName.value = storage;
-    }
-    if (storageTel) {
-      userPhone.value = storageTel;
-    }
-    if (storageMessage) {
-      textarea.value = storageMessage;
-    }
-  });
+  if (link && popup && userName && userPhone && textarea && buttonClose) {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      popup.classList.add('popup--opened');
+      body.classList.add('fixed');
+      userName.focus();
+      if (storage) {
+        userName.value = storage;
+      }
+      if (storageTel) {
+        userPhone.value = storageTel;
+      }
+      if (storageMessage) {
+        textarea.value = storageMessage;
+      }
+    });
 
-  const closePopup = () => {
-    popup.classList.remove('popup--opened');
-    body.classList.remove('fixed');
-  };
+    const closePopup = () => {
+      popup.classList.remove('popup--opened');
+      body.classList.remove('fixed');
+    };
 
-  buttonClose.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    closePopup();
-  });
+    buttonClose.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      closePopup();
+    });
 
-  window.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Escape') {
-      if (popup.classList.contains('popup--opened')) {
+
+    window.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        if (popup.classList.contains('popup--opened')) {
+          evt.preventDefault();
+          closePopup();
+        }
+      }
+    });
+
+    let overlay = false;
+
+    document.addEventListener('mousedown', (evt) => {
+      if (evt.target.classList.contains('popup')) {
+        overlay = true;
+      }
+    });
+
+    document.addEventListener('mouseup', (evt) => {
+      if (overlay && evt.target.classList.contains('popup')) {
         evt.preventDefault();
         closePopup();
       }
-    }
-  });
-
-  let overlay = false;
-
-  document.addEventListener('mousedown', (evt) => {
-    if (evt.target.classList.contains('popup')) {
-      overlay = true;
-    }
-  });
-
-  document.addEventListener('mouseup', (evt) => {
-    if (overlay && evt.target.classList.contains('popup')) {
-      evt.preventDefault();
-      closePopup();
-    }
-    overlay = false;
-  });
+      overlay = false;
+    });
+  }
 
   window.addEventListener('DOMContentLoaded', () => {
     [].forEach.call(document.querySelectorAll('.tel'), (input) => {
