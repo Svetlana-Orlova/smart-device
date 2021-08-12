@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-bottom: 92px;
+  padding-bottom: 75px;
 
   &::after {
     position: absolute;
@@ -22,8 +22,8 @@
     height: 26.8vw;
     max-width: 860px;
     max-height: 630px;
-    top: 30%;
-    right: 9%;
+    top: 29.5%;
+    right: 9.2%;
   }
 
   @media (min-resolution: 2dppx) {
@@ -36,13 +36,13 @@
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/bg-t@1x.png");
-    padding-bottom: 163px;
+    padding-bottom: 164px;
 
     &::after {
       background-image: url("../img/board-t@1x.png");
       width: 34vw;
       height: 44.2vw;
-      top: 100px;
+      top: 114px;
       right: 0;
     }
 
@@ -57,13 +57,13 @@
 
   @media (max-width: $mobile-width) {
     background-image: url("../img/bg-m@1x.png");
-    padding-bottom: 70px;
+    padding-bottom: 120px;
 
     &::after {
       background-image: url("../img/board-m@1x.png");
       width: 294px;
       height: 220px;
-      top: 75px;
+      top: 92px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -81,7 +81,7 @@
   position: relative;
   width: 39vw;
   max-width: 733px;
-  padding-top: 378px;
+  padding-top: 315px;
   margin-left: 13vw;
   margin-right: 13vw;
 
@@ -99,7 +99,7 @@
   @media (max-width: $mobile-width) {
     box-sizing: border-box;
     width: 287px;
-    padding-top: 300px;
+    padding-top: 286px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -108,9 +108,9 @@
 .banner__wrapper h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 79px;
   line-height: 94px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -135,8 +135,8 @@
   position: relative;
   padding: 0;
   margin: 0;
-  padding-left: 94px;
-  margin-top: 31px;
+  padding-left: 97px;
+  margin-top: 27px;
 
   &::before {
     position: absolute;
@@ -144,31 +144,32 @@
     background-color: $white;
     width: 66px;
     height: 2px;
-    top: 35px;
-    left: 5px;
+    top: 18px;
+    left: 3px;
   }
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: 28px;
-    padding-left: 48px;
-    margin-top: 32px;
+    padding-left: 51px;
+    margin-top: 29px;
 
     &::before {
       width: 33px;
-      top: 25px;
-      left: 6px;
+      top: 17px;
+      left: 3px;
     }
   }
 
   @media (max-width: $mobile-width) {
     font-size: 16px;
     line-height: 25px;
-    margin-top: 30px;
+    padding-left: 48px;
+    margin-top: 27px;
 
     &::before {
       top: 15px;
-      left: 8px;
+      left: 1px;
     }
   }
 }
@@ -192,27 +193,29 @@
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   background-color: $blue;
   border-radius: 5px;
-  width: 407px;
+  width: 350px;
   padding-top: 17px;
   padding-right: 28px;
-  padding-bottom: 14px;
+  padding-bottom: 17px;
   padding-left: 28px;
-  margin-left: 80px;
-  margin-top: 37px;
+  margin-left: 97px;
+  margin-top: 45px;
 
   @media (max-width: $tablet-width) {
-    width: 379px;
-    margin-left: 40px;
+    width: 325px;
+    padding-bottom: 18px;
+    margin-left: 50px;
+    margin-top: 55px;
   }
 
   @media (max-width: $mobile-width) {
     width: 0;
     padding: 0;
-    margin-top: 42px;
+    margin-top: 44px;
     margin-left: 0;
     font-size: 0;
     line-height: 0;
@@ -229,17 +232,17 @@
       font-size: 16px;
       line-height: 19px;
       text-align: center;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
       background-color: $blue;
       border-radius: 5px;
       box-sizing: border-box;
       width: 287px;
-      top: 0;
-      left: 0;
+      top: -8px;
+      left: -9px;
       padding-top: 17px;
       padding-right: 11px;
-      padding-bottom: 14px;
+      padding-bottom: 17px;
       padding-left: 11px;
       z-index: 5;
     }
@@ -255,8 +258,8 @@
   opacity: 0.5;
   transform: rotate(-90deg);
   transform-origin: left top 0;
-  margin-top: 170px;
-  margin-left: 0;
+  margin-top: 186px;
+  margin-left: 5px;
   width: 93px;
 
   @media (max-width: $tablet-width) {

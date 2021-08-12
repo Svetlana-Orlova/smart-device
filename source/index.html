@@ -53,49 +53,72 @@
         <a class="banner__link banner__link--scroll" href="#footer">Скролл вниз</a>
       </div>
     </section>
-    <section class="advantages" id="advantages">
-      <h2 class="visually-hidden">Наши преимущества</h2>
-      <ul class="advantages__list">
-        <li class="advantages__item advantages__item--term">
-          <h3>Оперативные сроки</h3>
-          <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
-        </li>
-        <li class="advantages__item advantages__item--suppliers">
-          <h3>Крупные поставщики</h3>
-          <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
-        </li>
-        <li class="advantages__item advantages__item--privacy">
-          <h3>Полная конфиденциальность</h3>
-          <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-        </li>
-        <li class="advantages__item advantages__item--price">
-          <h3>Персонализация стоимости</h3>
-          <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
-        </li>
-      </ul>
-    </section>
-    <section class="history" id="history">
-      <h2>О компании</h2>
-      <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-      <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span>&nbsp;(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-      <button type="button">Подробнее</button>
-    </section>
+    <div class="main-wrapper">
+      <section class="advantages" id="advantages">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--term">
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая система позволяет нам<span>&nbsp;</span> просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+          </li>
+          <li class="advantages__item advantages__item--suppliers">
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+          </li>
+          <li class="advantages__item advantages__item--privacy">
+            <h3>Полная конфиденциальность</h3>
+            <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li class="advantages__item advantages__item--price">
+            <h3>Персонализация стоимости</h3>
+            <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы<span>&nbsp;</span> установить ту цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="history" id="history">
+        <h2>О компании</h2>
+        <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+        <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span><br>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+        <button type="button">Подробнее</button>
+      </section>
+    </div>
     <section class="products" id="products">
       <div class="products__wrapper">
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <ul class="products__list">
           <li class="products__item">
             <a class="products__link products__link--production" href="#" id="production">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/production-m@1x.webp 1x, img/production-m@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/production-t@1x.webp 1x, img/production-t@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="img/production-d@1x.webp 1x, img/production-d@2x.webp 2x" type="image/webp">
+                <!-- 1х: 370px; 2x: 740px -->
+                <img src="img/production-d@1x.png" width="370" height="620" alt="Производство плат">
+              </picture>
               <p>Производство <br>печатных плат</p>
             </a>
           </li>
           <li class="products__item">
             <a class="products__link products__link--fitting" href="#" id="fitting">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/fitting-m@1x.webp 1x, img/fitting-m@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/fitting-t@1x.webp 1x, img/fitting-t@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="img/fitting-d@1x.webp 1x, img/fitting-d@2x.webp 2x" type="image/webp">
+                <!-- 1х: 370px; 2x: 740px -->
+                <img src="img/fitting-d@1x.png" width="370" height="620" alt="Монтаж плат">
+              </picture>
               <p>Монтаж печатных <br>плат</p>
             </a>
           </li>
           <li class="products__item">
             <a class="products__link products__link--components" href="#" id="components">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/components-m@1x.webp 1x, img/components-m@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/components-t@1x.webp 1x, img/components-t@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="img/components-d@1x.webp 1x, img/components-d@2x.webp 2x" type="image/webp">
+                <!-- 1х: 370px; 2x: 740px -->
+                <img src="img/components-d@1x.png" width="370" height="620" alt="Комплектующие">
+              </picture>
               <p>Комплектующие <br>для светотехники</p>
             </a>
           </li>
@@ -118,7 +141,7 @@
               <input class="tel" id="tel" name="tel" type="tel" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" maxlength="17" placeholder="Телефон" title="Формат: +7(987) 654-3210" required>
             </p>
           </div>
-          <textarea name="question" rows="6" placeholder="Ваш вопрос" required></textarea>
+          <textarea name="question" rows="4" placeholder="Ваш вопрос" required></textarea>
           <div class="form__wrapper form__wrapper--buttons">
             <button type="submit">Задать вопрос</button>
             <div class="form__checkbox">
@@ -166,7 +189,7 @@
         <nav class="footer-nav footer-list footer-list--nojs" id="footer-nav">
           <h2>Разделы сайта</h2>
           <button class="footer-nav__sections-toggle footer-list-toggle visually-hidden" type="button">
-            <span class="visually-hidden">Раскрыть</span>
+            <span title="Раскрыть"></span>
           </button>
           <div class="footer-nav__wrapper">
             <ul class="footer-nav__list" id="anchors">
@@ -197,7 +220,7 @@
         <div class="page-footer__contacts footer-list footer-list--nojs" id="contacts">
           <h2>Наш офис</h2>
           <button class="page-footer__contacts-toggle footer-list-toggle visually-hidden" type="button">
-            <span class="visually-hidden">Раскрыть</span>
+            <span title="Раскрыть"></span>
           </button>
           <div class="page-footer__contacts-wrapper">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>

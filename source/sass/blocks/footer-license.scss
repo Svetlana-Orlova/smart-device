@@ -1,9 +1,14 @@
 .page-footer__license {
   border-top: 1px solid $border-grey;
-  margin-top: 55px;
+  margin-top: 58px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 36px;
+  }
 
   @media (max-width: $mobile-width) {
     border-top: none;
+    margin-top: 29px;
   }
 }
 
@@ -14,9 +19,9 @@
   justify-content: flex-start;
   box-sizing: border-box;
   max-width: 1540px;
-  gap: 7vw;
-  padding-left: 50px;
-  padding-right: 50px;
+  gap: 7.5vw;
+  padding-left: 62px;
+  padding-right: 66px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 14px;
@@ -24,10 +29,15 @@
 
   @media (max-width: $tablet-width) {
     gap: 0;
-    padding-left: 25px;
+    padding-left: 27px;
     padding-right: 25px;
-    margin-top: 26px;
+    margin-top: 21px;
     margin-bottom: 28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 25px;
+    margin-top: 26px;
   }
 }
 
@@ -36,7 +46,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-width: 450px;
+  min-width: 457px;
   gap: 20px;
 
   @media (max-width: 1099px) {
@@ -57,7 +67,7 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $black;
   opacity: 0.5;

@@ -42,8 +42,8 @@
 .popup__close-button {
   position: absolute;
   box-sizing: border-box;
-  top: 10px;
-  right: 10px;
+  top: 14px;
+  right: 14px;
   width: 30px;
   height: 30px;
 
@@ -63,6 +63,8 @@
   font-weight: 400;
   font-size: 28px;
   line-height: 39px;
+  margin: 0;
+  margin-top: -2px;
 }
 
 .popup p {
@@ -70,15 +72,18 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
+  margin-top: 11px;
 }
 
 .popup__form ul {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 32px;
   padding: 0;
   margin: 0;
+  margin-top: 33px;
 }
 
 .popup__form input,
@@ -87,10 +92,10 @@
   background-color: $bg-blue;
   width: 100%;
   border: none;
-  padding-top: 15px;
+  padding-top: 14px;
   padding-right: 24px;
   padding-left: 24px;
-  padding-bottom: 15px;
+  padding-bottom: 17px;
 
   &::placeholder {
     font-family: "PT Mono", "Arial", sans-serif;
@@ -99,6 +104,10 @@
     line-height: 22px;
     color: $white;
   }
+}
+
+.popup__form textarea {
+  height: 105px;
 }
 
 .popup__form button {
@@ -116,7 +125,8 @@
   padding-top: 15px;
   padding-right: 27px;
   padding-left: 27px;
-  padding-bottom: 8px;
+  padding-bottom: 14px;
+  margin-top: -6px;
 
   &:hover,
   &:focus {
@@ -139,7 +149,8 @@
   opacity: 0.8;
   cursor: pointer;
   position: relative;
-  padding-left: 45px;
+  padding-left: 48px;
+  padding-right: 5px;
 
   &::before {
     position: absolute;

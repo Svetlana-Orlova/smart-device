@@ -1,22 +1,55 @@
+.main-wrapper {
+  background-image: url("../img/bg-polygons-d@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -28px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-polygons-d@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-position: right center;
+    background-size: 560px auto;
+    background-image: url("../img/bg-polygon-t@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-polygon-t@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-position: center;
+    background-size: 100%;
+    background-image: url("../img/bg-polygon-m@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-polygon-m@2x.png");
+    }
+  }
+}
+
 .advantages {
   box-sizing: border-box;
   text-align: left;
   padding-left: 50px;
   padding-right: 50px;
-  margin-top: 109px;
+  padding-top: 109px;
   margin-right: auto;
   margin-left: auto;
 
   @media (max-width: $tablet-width) {
     padding-left: 25px;
     padding-right: 25px;
-    margin-top: 54px;
+    padding-top: 24px;
+    margin-top: 30px;
   }
 
   @media (max-width: $mobile-width) {
     padding-left: 14px;
     padding-right: 16px;
-    margin-top: 37px;
+    padding-top: 17px;
+    margin-top: 20px;
   }
 }
 
@@ -38,24 +71,23 @@
   @media (max-width: $mobile-width) {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
   }
 }
 
 .advantages__item {
+  background-color: $white;
   box-sizing: border-box;
   position: relative;
   border: 1px solid $border;
   border-left: 3px solid $blue;
   cursor: pointer;
+  min-height: 300px;
   padding-bottom: 49px;
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 12px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-bottom: 20px;
+    min-height: 233px;
+    padding-bottom: 4px;
   }
 
   &::after {
@@ -70,6 +102,11 @@
       left: 27px;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    min-height: 100px;
+    padding-bottom: 12px;
+  }
 }
 
 .advantages__item--term::after {
@@ -77,11 +114,15 @@
   width: 29px;
   height: 35px;
   top: 40px;
-  left: 45px;
+  left: 42px;
 
   @media (max-width: $tablet-width) {
     top: 24px;
-    left: 28px;
+    left: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 25px;
   }
 }
 
@@ -90,13 +131,17 @@
   width: 35px;
   height: 35px;
   top: 40px;
-  left: 45px;
+  left: 42px;
 
   @media (max-width: $tablet-width) {
     width: 32px;
     height: 32px;
-    top: 24px;
-    left: 28px;
+    top: 23px;
+    left: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 25px;
   }
 }
 
@@ -105,13 +150,18 @@
   width: 36px;
   height: 31px;
   top: 44px;
-  left: 45px;
+  left: 42px;
 
   @media (max-width: $tablet-width) {
     width: 30px;
     height: 26px;
     top: 27px;
-    left: 28px;
+    left: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 26px;
+    left: 24px;
   }
 }
 
@@ -119,14 +169,19 @@
   background-image: url("../img/icon-tag.svg");
   width: 35px;
   height: 35px;
-  top: 40px;
-  left: 45px;
+  top: 38px;
+  left: 42px;
 
   @media (max-width: $tablet-width) {
     width: 32px;
     height: 32px;
     top: 24px;
-    left: 28px;
+    left: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 26px;
+    left: 26px;
   }
 }
 
@@ -163,18 +218,18 @@
   line-height: 34px;
   color: $blue;
   padding-left: 42px;
-  margin-top: 98px;
+  margin-top: 96px;
+  margin-bottom: 0;
 
   @media (max-width: $tablet-width) {
     padding-left: 25px;
-    margin-top: 67px;
+    margin-top: 66px;
   }
 
   @media (max-width: $mobile-width) {
     font-size: 20px;
     line-height: 28px;
-    padding-left: 27px;
-    margin-top: 71px;
+    padding-left: 25px;
   }
 }
 
@@ -189,16 +244,90 @@
   margin-top: 15px;
 
   @media (max-width: $tablet-width) {
-    padding-left: 27px;
+    padding-left: 24px;
     padding-right: 27px;
-    margin-top: 21px;
+    margin-top: 7px;
   }
 
   @media (max-width: $mobile-width) {
     font-size: 16px;
     line-height: 22px;
-    padding-left: 25px;
+    padding-left: 24px;
     padding-right: 11px;
-    margin-top: 16px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+}
+
+.advantages__item span {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: inline;
+    vertical-align: middle;
+  }
+}
+
+.advantages__item--term {
+  @media (max-width: $mobile-width) {
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    @media (max-width: $mobile-width) {
+      margin-top: 73px;
+    }
+  }
+}
+
+.advantages__item--suppliers {
+  @media (max-width: $mobile-width) {
+    padding-bottom: 23px;
+  }
+
+  h3 {
+    @media (max-width: $mobile-width) {
+      margin-top: 69px;
+    }
+  }
+}
+
+.advantages__item--privacy {
+  @media (max-width: $mobile-width) {
+    padding-bottom: 52px;
+  }
+
+  h3 {
+    @media (max-width: $mobile-width) {
+      margin-top: 64px;
+    }
+  }
+
+  p {
+    @media (max-width: $tablet-width) {
+      margin-top: 13px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-top: 17px;
+    }
+  }
+}
+
+.advantages__item--price {
+  @media (max-width: $mobile-width) {
+    padding-bottom: 15px;
+  }
+
+  h3 {
+    @media (max-width: $mobile-width) {
+      margin-top: 70px;
+    }
+  }
+
+  p {
+    @media (max-width: $mobile-width) {
+      margin-top: 16px;
+    }
   }
 }

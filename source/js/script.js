@@ -120,9 +120,14 @@
       let keyCode;
       function mask (evt) {
         evt.keyCode && (keyCode = evt.keyCode);
-        const pos = this.selectionStart;
-        if (pos < 3) {
-          evt.preventDefault();
+        if (this.value[0] !== '+') {
+          this.value[0] = '+';
+        }
+        if (this.value[1] !== '7') {
+          this.value[1] = '7';
+        }
+        if (this.value[2] !== ' ') {
+          this.value[2] = ' ';
         }
         const matrix = '+7 (___) ___ ____';
         let i = 0;
