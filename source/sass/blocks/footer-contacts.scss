@@ -1,9 +1,19 @@
 .page-footer__contacts {
   margin: 0;
   width: 37.2%;
+  margin-left: 20.3%;
+
+  @media (max-width: 1455px) {
+    margin-left: 100px;
+  }
 
   @media (max-width: $tablet-width) {
     width: auto;
+    margin-left: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
   }
 }
 
