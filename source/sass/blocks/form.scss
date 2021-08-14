@@ -1,18 +1,14 @@
 .form {
   width: 100%;
   background-color: $blue;
-  background-image: url("../img/paperplane@1x.png");
+  background-image: url("../img/bg-form-d@1x.png");
   background-repeat: no-repeat;
-  background-size: 91%;
-  background-position: 100% 63%;
+  background-size: 100%;
+  background-position: center -58px;
   margin: 0;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/paperplane@2x.png");
-  }
-
-  @media (max-width: 1440px) {
-    background-position: 50% 63%;
+    background-image: url("../img/bg-form-d@2x.png");
   }
 
   @media (max-width: $tablet-width) {
@@ -21,15 +17,35 @@
 }
 
 .form__container {
+  position: relative;
   max-width: 585px;
   box-sizing: border-box;
-  position: relative;
   border: none;
   padding: 0;
   padding-top: 90px;
   padding-bottom: 114px;
   margin: 0;
   left: 50vw;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/paper-airplane@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 88%;
+    height: 100%;
+    max-width: 511px;
+    max-height: 288px;
+    top: 160px;
+    left: -610px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/paper-airplane@2x.png");
+    }
+  }
 
   @media (max-width: 1440px) {
     left: 40vw;
@@ -165,6 +181,7 @@ textarea::placeholder {
 .form__container textarea {
   margin-top: 35px;
   height: 155px;
+  resize: none;
 
   @media (max-width: $tablet-width) {
     margin-top: 40px;
@@ -183,12 +200,12 @@ textarea::placeholder {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 38px;
+  gap: 35px;
   margin: 0;
   margin-top: 41px;
 
   @media (max-width: $tablet-width) {
-    gap: 73px;
+    gap: 39px;
     justify-content: flex-start;
   }
 
@@ -247,10 +264,14 @@ textarea::placeholder {
   width: 230px;
   padding: 0;
   margin: 0;
+  margin-right: 34px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
 
   @media (max-width: $mobile-width) {
-    width: 80%;
-    padding-left: 34px;
+    width: 86%;
     margin-left: 0;
     margin-right: auto;
     margin-top: -7px;
@@ -270,10 +291,13 @@ textarea::placeholder {
   line-height: 16px;
   color: $white;
   display: block;
-  padding-top: 7px;
   cursor: pointer;
   position: relative;
   opacity: 0.8;
+  box-sizing: border-box;
+  width: max-content;
+  padding-top: 7px;
+  padding-left: 34px;
 
   &::before {
     position: absolute;
@@ -283,7 +307,7 @@ textarea::placeholder {
     width: 16px;
     height: 16px;
     top: 8px;
-    left: -34px;
+    left: 0;
   }
 
   &:hover,
@@ -300,6 +324,8 @@ textarea::placeholder {
   }
 
   @media (max-width: $mobile-width) {
+    width: 250px;
+    max-width: max-content;
     padding-top: 7px;
   }
 }
@@ -313,7 +339,7 @@ textarea::placeholder {
   border-right: 1px solid $white;
   border-bottom: 1px solid $white;
   top: 10px;
-  left: -27px;
+  left: 6px;
   transform: rotate(45deg);
 }
 

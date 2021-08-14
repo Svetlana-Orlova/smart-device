@@ -14,7 +14,7 @@
     width: 220px;
     height: 317px;
     background-image: url("../img/number-d@1x.png");
-    background-position: center;
+    background-position: center right;
     background-repeat: no-repeat;
     background-size: 100%;
     top: 0;
@@ -22,6 +22,12 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/number-d@2x.png");
+    }
+  }
+
+  @media (max-width: 1220px) {
+    &::after {
+      left: -8px;
     }
   }
 
@@ -35,7 +41,6 @@
       width: 251px;
       height: 362px;
       top: -3px;
-      left: -8px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/number-t@2x.png");

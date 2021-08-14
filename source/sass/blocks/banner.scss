@@ -11,27 +11,24 @@
   background-position: center;
   padding-bottom: 75px;
 
-  &::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/board-d@1x.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    width: 36.7vw;
-    height: 26.8vw;
-    max-width: 860px;
-    max-height: 630px;
-    top: 29.5%;
-    right: 9.2%;
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   background-image: url("../img/board-d@1x.png");
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   background-position: center;
+  //   width: 36.7%;
+  //   height: 58%;
+  //   max-width: 705px;
+  //   max-height: 515px;
+  //   top: 29.5%;
+  //   right: 50%;
+  //   transform: translateX(111%);
+  // }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bg-d@2x.png");
-
-    &::after {
-      background-image: url("../img/board-d@2x.png");
-    }
   }
 
   @media (max-width: $tablet-width) {
@@ -39,6 +36,11 @@
     padding-bottom: 164px;
 
     &::after {
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
       background-image: url("../img/board-t@1x.png");
       width: 34vw;
       height: 44.2vw;
@@ -79,26 +81,58 @@
 .banner__wrapper {
   color: $white;
   position: relative;
-  width: 39vw;
-  max-width: 733px;
+  z-index: 5;
+  max-width: 1443px;
   padding-top: 315px;
-  margin-left: 13vw;
-  margin-right: 13vw;
+  padding-left: 40px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 
-  @media (max-width: 1400px) {
-    width: 52vw;
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/board-d@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 47%;
+    height: 64%;
+    max-width: 705px;
+    max-height: 515px;
+    top: 258px;
+    right: -32px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/board-d@2x.png");
+    }
+  }
+
+  @media (max-width: 1570px) {
+    padding-left: 20px;
+
+    &::after {
+      right: 0;
+    }
   }
 
   @media (max-width: $tablet-width) {
     width: 470px;
     padding-top: 188px;
-    margin-left: 11.4vw;
-    margin-right: 11.4vw;
+    padding-left: 60px;
+    padding-right: 26px;
+    margin: 0;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (max-width: $mobile-width) {
     box-sizing: border-box;
-    width: 287px;
+    width: 100%;
+    max-width: 590px;
+    padding: 0;
     padding-top: 286px;
     margin-right: auto;
     margin-left: auto;
@@ -112,17 +146,20 @@
   line-height: 94px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  max-width: 52vw;
   margin: 0;
   padding: 0;
 
   @media (max-width: $tablet-width) {
     font-size: 60px;
     line-height: 70px;
+    padding-left: 28px;
   }
 
   @media (max-width: $mobile-width) {
     font-size: 40px;
     line-height: 47px;
+    padding-left: 15px;
   }
 }
 
@@ -133,6 +170,7 @@
   line-height: 34px;
   box-sizing: border-box;
   position: relative;
+  max-width: 725px;
   padding: 0;
   margin: 0;
   padding-left: 97px;
@@ -148,28 +186,32 @@
     left: 3px;
   }
 
+  @media (max-width: 1400px) {
+    max-width: 625px;
+  }
+
   @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: 28px;
-    padding-left: 51px;
+    padding-left: 79px;
     margin-top: 29px;
 
     &::before {
       width: 33px;
-      top: 17px;
-      left: 3px;
+      top: 16px;
+      left: 31px;
     }
   }
 
   @media (max-width: $mobile-width) {
     font-size: 16px;
     line-height: 25px;
-    padding-left: 48px;
+    padding-left: 66px;
     margin-top: 27px;
 
     &::before {
       top: 15px;
-      left: 1px;
+      left: 19px;
     }
   }
 }
@@ -208,7 +250,7 @@
   @media (max-width: $tablet-width) {
     width: 325px;
     padding-bottom: 18px;
-    margin-left: 50px;
+    margin-left: 78px;
     margin-top: 55px;
   }
 
@@ -220,7 +262,7 @@
     font-size: 0;
     line-height: 0;
     position: relative;
-    left: 10px;
+    left: 27px;
     top: 5px;
 
     &::after {

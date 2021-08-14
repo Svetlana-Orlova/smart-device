@@ -16,7 +16,7 @@
   margin-top: 62px;
 
   @media (max-width: 1420px) {
-    gap: 50px 110px;
+    gap: 50px 55px;
   }
 
   @media (max-width: $tablet-width) {
@@ -65,6 +65,7 @@
   width: 216px;
   height: 52px;
   opacity: 1;
+  cursor: default;
 }
 
 .page-footer__social p {
@@ -115,7 +116,7 @@
   }
 }
 
-.page-footer__social a {
+.page-footer__social-list a {
   &:focus,
   &:hover {
     opacity: 0.7;
