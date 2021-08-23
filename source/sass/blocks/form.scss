@@ -209,7 +209,6 @@ textarea::placeholder {
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
-    gap: 30px;
     margin-top: 25px;
   }
 }
@@ -274,7 +273,7 @@ textarea::placeholder {
     width: 86%;
     margin-left: 0;
     margin-right: auto;
-    margin-top: -7px;
+    margin-top: 23px;
   }
 }
 

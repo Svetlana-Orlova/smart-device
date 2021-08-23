@@ -22,27 +22,27 @@
         <img src="img/icon-logo-t.svg" width="202" height="52" alt="Логотип Smart Device">
       </picture>
     </a>
-    <ul class="page-header__list">
-      <li class="page-header__item">
-        <a class="page-header__link page-header__link--mail" href="mailto:info@sd.ru">
-          <svg width="26" height="19" viewBox="0 0 26 19">
-            <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-          </svg>
-          <p>info@sd.ru</p>
-        </a>
-      </li>
-      <li class="page-header__item">
-        <a class="page-header__link page-header__link--tel" href="tel:+74950005252">
-          <svg width="25" height="24" viewBox="0 0 25 24">
-            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-          </svg>
-          <p>+7 (495) 000 52 52</p>
-        </a>
-      </li>
-      <li class="page-header__item page-header__item--call">
-        <a class="page-header__link page-header__link--call call" href="#">Заказать звонок</a>
-      </li>
-    </ul>
+    <div class="page-header__wrapper">
+      <ul class="page-header__list">
+        <li class="page-header__item">
+          <a class="page-header__link page-header__link--mail" href="mailto:info@sd.ru">
+            <svg width="26" height="19" viewBox="0 0 26 19">
+              <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+            </svg>
+            <p>info@sd.ru</p>
+          </a>
+        </li>
+        <li class="page-header__item">
+          <a class="page-header__link page-header__link--tel" href="tel:+74950005252">
+            <svg width="25" height="24" viewBox="0 0 25 24">
+              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+            </svg>
+            <p>+7 (495) 000 52 52</p>
+          </a>
+        </li>
+      </ul>
+      <a class="page-header__button button-call" href="#">Заказать звонок</a>
+    </div>
   </header>
   <main class="page-main">
     <section class="banner">
@@ -164,22 +164,23 @@
         <ul class="page-footer__social-list">
           <li>
             <a href="#">
-              <svg  width="27" height="27" viewBox="0 0 27 27">
-                <use xlink:href="../img/sprite_auto.svg#icon-fb"></use>
+              <svg width="27" height="27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27 13.5C27 6.045 20.956 0 13.5 0S0 6.045 0 13.5C0 20.956 6.044 27 13.5 27S27 20.956 27 13.5zM16.884 9.294h-1.74c-.469 0-.798.397-.798.891v.775h2.485l-.402 2.517h-2.083v6.747h-2.543v-6.747h-1.688V10.96h1.688V9.677h.004c.045-1.463.553-2.856 3.031-2.944v-.01h2.046v2.571z" fill="#CDCDCD"/>
               </svg>
             </a>
           </li>
           <li>
             <a href="#">
-              <svg  width="27" height="27" viewBox="0 0 27 26">
-                <use xlink:href="../img/sprite_auto.svg#icon-ok"></use>
+              <svg width="27" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.851 10.957c1.016 0 1.805-.836 1.787-1.746.018-.91-.753-1.764-1.768-1.764-.978 0-1.787.78-1.787 1.746 0 .965.79 1.764 1.768 1.764z" fill="#CDCDCD"/>
+                <path d="M13.7 0C6.44 0 .536 5.831.536 13c0 7.187 5.906 13 13.166 13 7.279 0 13.165-5.831 13.165-13 .02-7.169-5.886-13-13.165-13zm.189 4.921c2.37 0 4.326 1.932 4.307 4.29 0 2.377-1.975 4.29-4.382 4.253-2.37-.037-4.27-1.95-4.27-4.271 0-2.359 1.937-4.272 4.345-4.272zm4.834 10.029c0 .037-.02.056-.02.093a1.213 1.213 0 01-.563.873c-.207.13-.433.26-.659.371a8.55 8.55 0 01-1.787.65c-.075.019-.075.019-.018.074l1.034 1.022 1.317 1.3c.62.613.451 1.634-.339 2.006-.132.074-.282.092-.432.13h-.245c-.019 0-.038 0-.038-.02-.3-.036-.545-.185-.77-.39l-2.276-2.246c-.057-.056-.057-.056-.113 0l-2.295 2.265a1.38 1.38 0 01-.433.298c-.112.055-.244.074-.357.092h-.244c-.038 0-.057-.018-.094-.018-.508-.093-.847-.372-.997-.854-.15-.483-.038-.91.32-1.263l.94-.929 1.392-1.374c.056-.056.056-.056-.02-.074-.018 0-.056-.019-.074-.019a8.183 8.183 0 01-2.351-.984c-.433-.279-.64-.687-.583-1.189.094-.928 1.147-1.43 1.937-.928.15.092.282.167.451.241a5.413 5.413 0 002.746.557c.47-.018.94-.111 1.41-.26.452-.148.847-.353 1.26-.575.678-.39 1.562-.075 1.825.65.038.11.057.204.076.315v.186z" fill="#CDCDCD"/>
               </svg>
             </a>
           </li>
           <li>
             <a href="#">
-              <svg  width="27" height="26" viewBox="0 0 27 26">
-                <use xlink:href="../img/sprite_auto.svg#icon-vk"></use>
+              <svg width="27" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.475 15.127c-1.109-1.024-1.188-1.024-.238-2.206 1.188-1.497 2.773-3.388 1.347-3.388H17.97c-.475 0-.554.316-.713.71-.633 1.496-1.9 3.466-2.376 3.15-.475-.314-.237-1.496-.237-3.387a.61.61 0 00-.159-.63c-.158-.158-.396-.315-.633-.315-.396-.079-.792-.158-1.188-.158-1.505 0-2.535.63-1.98.71 1.03.157.95 2.363.712 3.308-.396 1.655-1.98-1.26-2.693-2.757-.079-.394-.396-.63-.792-.63H5.852c-.317 0-.554.078-.554.315 0 .393 1.98 4.254 3.801 6.224 1.822 1.89 3.644 1.733 4.911 1.733a.607.607 0 00.396-.158.6.6 0 00.158-.394c0-1.26.476-1.89 1.347-1.024.95.945 1.188 1.576 2.376 1.576h2.138c.555 0 .713-.158.713-.394.08-.552-.871-1.576-1.663-2.285zM13.852.001c7.366.157 13.226 6.066 13.147 13.235-.079 7.17-6.178 12.842-13.543 12.763C6.01 25.92.07 20.17.07 13 .15 5.753 6.327-.077 13.852.002z" fill="#CDCDCD"/>
               </svg>
             </a>
           </li>
@@ -205,6 +206,8 @@
               <li class="footer-nav__item">
                 <a href="#fitting">Монтаж печатных плат</a>
               </li>
+            </ul>
+            <ul class="footer-nav__list footer-nav__list-2">
               <li class="footer-nav__item">
                 <a href="#components">Комплектующие</a>
               </li>
